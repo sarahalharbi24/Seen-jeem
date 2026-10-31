@@ -161,6 +161,7 @@ if(newDev)P={active:'DEFAULT',packs:{DEFAULT:{name:'الحزمة الافترا�
 if(P.packs.SEEN26){P.packs.TUWIQ=P.packs.SEEN26;delete P.packs.SEEN26;if(P.active=='SEEN26')P.active='TUWIQ'}
 if(!P.packs.TUWIQ||P.packs.TUWIQ.v!=2){P.packs.TUWIQ={name:BAKED2.n,imp:1,v:2,cats:JSON.parse(JSON.stringify(BAKED2.cats.concat(BAKED.cats)))};P.active='TUWIQ';S.used={};S.playing=false}
 if(P.packs.KRLXV){delete P.packs.KRLXV;if(P.active=='KRLXV')P.active='TUWIQ'}
+if(!P.packs.TUWIQ.aud){P.packs.TUWIQ.aud=1;P.packs.TUWIQ.cats.splice(4,0,{name:'صوتيات',qs:[100,200,300,400,500].map(p=>({p,q:'استمع للمقطع وأجب',a:''}))})}
 if(!P.packs[P.active])P.active=Object.keys(P.packs)[0];
 S.cats=P.packs[P.active].cats;
 function defHq(){return[{l:'ب',q:'ما اسم عاصمة عربية تبدأ بحرف الباء؟',a:'بغداد أو بيروت'},{l:'د',q:'ما اسم عاصمة عربية تبدأ بحرف الدال؟',a:'دمشق'},{l:'ر',q:'ما عاصمة المملكة العربية السعودية؟',a:'الرياض'},{l:'ق',q:'ما اسم عاصمة عربية تبدأ بحرف القاف؟',a:'القاهرة'},{l:'م',q:'ما اسم عاصمة عربية تبدأ بحرف الميم؟',a:'مسقط'},{l:'ط',q:'ما عاصمة اليابان؟ (تبدأ بحرف الطاء)',a:'طوكيو'}]}
